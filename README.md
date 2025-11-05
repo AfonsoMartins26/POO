@@ -1,63 +1,65 @@
-# Spotifum — Projeto POO
-
-Spotifum é um projecto académico (POO) que simula funcionalidades básicas de um reprodutor de música e gestão de utilizadores, playlists e reproduções. O código está organizado em pacotes Java com funcionalidades para gerir músicas, playlists, reproduções e consultas/relatórios.
+# Spotifum — OOP Project
 
 Grade: 17 / 20 ⭐
 
-## Principais funcionalidades
+## Short description
 
-- Gestão de músicas (criação, leitura)
-- Gestão de utilizadores e planos de subscrição
-- Playlists públicas/privadas, playlists geradas e favoritas
-- Gestão de reproduções (registo, contadores)
-- Queries/relatórios (música mais reproduzida, intérprete mais ouvido, etc.)
+Spotifum is an academic OOP project that simulates basic music player features and management of users, playlists, and reproductions. The codebase is organized into Java packages that handle music, playlists, users, reproductions, and query/report generation.
 
-## Requisitos
+## Main features
 
-- Java 21 (recomendado)
-- Gradle (o repositório inclui wrappers `gradlew`/`gradlew.bat`)
+- Music management (create, read)
+- User management and subscription plans
+- Public/private playlists, generated playlists, and favorites
+- Reproduction management (logging, counters)
+- Queries/reports (most played music, most listened interpreter, etc.)
 
-## Build e execução
+## Requirements
 
-Usando o wrapper incluído (recomendado):
+- Java 21 (recommended)
+- Gradle (the repository includes the wrappers `gradlew` / `gradlew.bat`)
+
+## Build & run
+
+Using the included wrapper (recommended):
 
 ```bash
 ./gradlew build
 ```
 
-Depois de construir, execute o JAR gerado (o nome pode variar, use o ficheiro em `build/libs`):
+After the build finishes, run the generated JAR (name may vary — check `build/libs`):
 
 ```bash
 java -jar build/libs/spotifum-1.0-SNAPSHOT.jar
 ```
 
-## Estrutura do repositório
+## Repository structure
 
-Resumo das pastas mais importantes (caminho relativo ao projecto):
+Key folders (relative to project root):
 
 - `src/main/java/spotifum/`
 
-  - `Musics/` — classes e interfaces relacionadas com músicas (e.g., `Musica`, `MusicManager`)
-  - `Playlists/` — playlists, geradores de playlists e gestão de reprodução
-  - `Users/` — gestão de utilizadores e planos de subscrição
-  - `Reproductions/` — registos de reprodução e manager associado
-  - `Menu/` — classes para interacção em consola (input/menus)
-  - `queries/` — classes com queries e relatórios do sistema
-  - `Exceptions/` — excepções customizadas (e.g., `MusicNotFoundException`)
+  - `Musics/` — classes and interfaces related to music (e.g., `Musica`, `MusicManager`)
+  - `Playlists/` — playlists, playlist generators, and playback management
+  - `Users/` — user management and subscription plans
+  - `Reproductions/` — reproduction records and manager
+  - `Menu/` — console interaction classes (input/menu handling)
+  - `queries/` — system queries and reporting utilities
+  - `Exceptions/` — custom exceptions (e.g., `MusicNotFoundException`)
 
-- `src/test/java/spotifum/` — testes unitários organizados por pacotes (Musics, Playlists, Users, etc.)
+- `src/test/java/spotifum/` — unit tests organized by package (Musics, Playlists, Users, etc.)
 
-## Ficheiros de estado
+## State files
 
-O projecto inclui um directório de estados iniciais `Load_States/Estado1/` com ficheiros `.ser` (objetos serializados). Estes são usados para popular o sistema com dados de exemplo durante o arranque.
+The project includes an initial state folder `Load_States/Estado1/` with `.ser` files (serialized objects). These files are used to populate the system with example data at startup.
 
-## Diagrama UML
+## UML diagram
 
-O diagrama UML do projecto encontra-se em `Diagrama UML - POO.png` (raiz do repositório). Consulte-o para uma visão rápida das principais classes e relações.
+The project's UML diagram is available at `Diagrama UML - POO.png` in the repository root. It provides a quick overview of the main classes and relationships.
 
-## Executar testes localmente
+## Running tests locally
 
-Para executar todos os testes JUnit:
+To run all JUnit tests:
 
 ```bash
 ./gradlew test
